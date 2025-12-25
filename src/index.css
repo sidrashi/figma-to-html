@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --black: black;
+  --orange-red: #ea552b;
+  --gold: #fdd900;
+  --indian-red: #f7414e;
+  --orange: #fb421f;
+  --midnight-blue: #130933;
+  --lime: #61f15c;
+  --white: white;
+  --white-smoke: #f6f9fc;
+  --medium-sea-green: #2cc05a;
+  --gray: #8f8f8f;
+  --royal-blue: #0c77f8;
+  --lavender-blush: #f5e8f8;
+  --indigo: #3a2099;
+  --royal-blue-2: #0052ff;
+  --dark-slate-blue: #3e396b;
+  --cornflower-blue: #8994c6;
+  --dodger-blue: #097fff;
+  --ghost-white: #f3f6ff;
+  --deep-sky-blue: #0ab3e4;
+  --border: #e4e4e4;
+  --main-text: #162944;
+  --white-smoke-2: #f8f9fc;
+  --slate-blue: #1a49dd;
+  --slate-grey: #6b7c93;
+  --light-steel-blue: #94a7c2;
+  --royal-blue-3: #05f;
+  --dodger-blue-2: #09f;
+  --dodger-blue-3: #09f;
+  --purple: #80376b;
+  --orange-2: #fd9800;
+  --linen: #fbe8de;
+  --background: #ece6e8;
+  --p-gray: #99948f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--black);
+    font-family: "Figtree", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  h1 {
+    font-family: "Figtree", sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 56px;
+    letter-spacing: -3px;
+  }
+  p {
+    font-family: "Figtree", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--p-gray);
+  }
+}
+
+@layer utilities {
+  .font-nostalgic {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .btn-shadow {
+    box-shadow: 0 1px 2px #0000004d, 0 0 #000, inset 1px 1px 0.25px #ffffff4d,
+      inset 0 2px 1px #ffffff80;
+  }
+  .hero-shadow {
+    box-shadow: inset 0 2px 1px #5f5f5f80, inset 1px 1px 0.2px #ffffff9e;
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 1s ease-out forwards;
+  }
+}
