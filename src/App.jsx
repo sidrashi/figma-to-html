@@ -1,4 +1,5 @@
 import Hero from "./components/Hero"
+import Hiw from "./components/Hiw"
 
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <Hero />
+      <Hiw />
     </>
   )
 }
