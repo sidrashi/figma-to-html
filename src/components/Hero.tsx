@@ -66,7 +66,7 @@ const Hero = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                Design subscriptions for{" "}
+                Unlimited Figma to Code.{" "}
               </motion.span>
               <motion.span 
                 className="font-serif italic font-normal text-gradient bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent"
@@ -74,7 +74,7 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                everyone
+                One simple monthly subscription.
               </motion.span>
             </motion.h1>
             <motion.p 
@@ -83,7 +83,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              Pause or cancel anytime.
+              Pause or cancel anytime. Fast delivery. Clean production ready code.
             </motion.p>
 
             {/* Eye-catching CTA */}
@@ -194,7 +194,7 @@ const Hero = () => {
 
                 <div className="pt-10 sm:pt-12 relative z-10">
                   <h2 className="text-2xl sm:text-3xl font-bold mb-2">
-                    Join<br />Designhenko
+                    Join<br />Pixel to Code
                   </h2>
                   <p className="text-white/80 mb-4 sm:mb-6 text-sm sm:text-base">
                     One subscription to rule them all.
