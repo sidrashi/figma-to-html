@@ -32,12 +32,11 @@ const Process = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            The way design{" "}
+            Unlimited code, one{" "}
             <span className="font-serif italic font-normal text-gradient bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
-              should've
+              flat monthly{" "}
             </span>
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>been done in the first place
+            fee
           </h2>
         </motion.div>
 
@@ -51,11 +50,11 @@ const Process = () => {
         >
           {/* Card 1 - Subscribe */}
           <motion.div
-            className="card-gradient-1 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white min-h-[320px] sm:min-h-[380px] md:min-h-[400px] flex flex-col"
+            className="card-gradient-1 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white min-h-[320px] sm:min-h-[380px] md:min-h-[400px] flex flex-col justify-center items-center text-center"
             variants={cardVariants}
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
           >
-            <div className="mb-auto">
+            <div className="mb-auto flex flex-col justify-center items-center">
               <motion.div
                 className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6"
                 whileHover={{ rotate: 10, scale: 1.1 }}
@@ -72,20 +71,20 @@ const Process = () => {
                 Subscribe
               </h3>
               <p className="text-white/80 text-sm sm:text-base">
-                Subscribe to a plan & request as many designs as you'd like.
+                Subscribe to a plan & request as many code as you'd like.
               </p>
             </div>
 
             {/* Mock pricing card */}
             <motion.div
-              className="bg-black/80 rounded-xl sm:rounded-2xl p-3 sm:p-4 mt-4 sm:mt-6"
+              className="bg-black/80 rounded-xl sm:rounded-2xl p-3 mt-4 sm:mt-6 w-full max-w-[240px]"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
               <p className="text-xs text-white/60 mb-1">Monthly club</p>
-              <p className="text-xl sm:text-2xl font-bold text-white">
+              <p className="text-xl md:text-2xl font-bold text-white">
                 $4,995
                 <span className="text-xs sm:text-sm font-normal text-white/60">
                   /month
@@ -96,35 +95,47 @@ const Process = () => {
 
           {/* Card 2 - Request */}
           <motion.div
-            className="card-gradient-2 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white min-h-[320px] sm:min-h-[380px] md:min-h-[400px] flex flex-col"
+            className="card-gradient-2 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white min-h-[320px] sm:min-h-[380px] md:min-h-[400px] flex flex-col justify-center items-center text-center"
             variants={cardVariants}
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
           >
-            <div className="mb-auto">
+            <div className="mb-auto flex flex-col justify-center items-center">
+              <motion.div
+                className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6"
+                whileHover={{ rotate: 10, scale: 1.1 }}
+              >
+                <svg
+                  className="w-10 h-10 sm:w-8 sm:h-8"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                 <path d="M21.561 5.318l-2.879-2.879c-.293-.293-.677-.439-1.061-.439-.385 0-.768.146-1.061.439l-3.56 3.561h-9c-.552 0-1 .447-1 1v13c0 .553.448 1 1 1h13c.552 0 1-.447 1-1v-9l3.561-3.561c.293-.293.439-.677.439-1.061s-.146-.767-.439-1.06zm-10.061 9.354l-2.172-2.172 6.293-6.293 2.172 2.172-6.293 6.293zm-2.561-1.339l1.756 1.728-1.695-.061-.061-1.667zm7.061 5.667h-11v-11h6l-3.18 3.18c-.293.293-.478.812-.629 1.289-.16.5-.191 1.056-.191 1.47v3.061h3.061c.414 0 1.108-.1 1.571-.29.464-.19.896-.347 1.188-.64l3.18-3.07v6zm2.5-11.328l-2.172-2.172 1.293-1.293 2.171 2.172-1.292 1.293z"/>
+                </svg>
+              </motion.div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
                 Request
               </h3>
-              <p className="text-white/80 mb-4 sm:mb-6 text-sm sm:text-base">
-                Request whatever you'd like, from mobile apps to logos.
+              <p className="text-white/80 mb-4 sm:mb-6 text-sm sm:text-base max-w-xs">
+                Request whatever you'd like, from ui to website.
               </p>
             </div>
 
             {/* Service tags */}
             <motion.div
-              className="flex flex-wrap gap-1.5 sm:gap-2"
+              className="flex flex-wrap justify-center gap-1.5 sm:gap-2"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, staggerChildren: 0.05 }}
             >
               {[
-                "Presentations",
-                "Logos",
-                "Social Media",
-                "Print design",
-                "Ad creative",
-                "Email",
-                "Packaging",
+                "Figma → React",
+                "Landing Pages",
+                "UI Components",
+                "Mobile-First Fixes",
+                "Custom Animations",
+                "Custom Shopify",
+                "API Plumbing",
               ].map((service, i) => (
                 <motion.span
                   key={service}
@@ -146,13 +157,13 @@ const Process = () => {
 
           {/* Card 3 - Receive */}
           <motion.div
-            className="card-gradient-3 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white min-h-[320px] sm:min-h-[380px] md:min-h-[400px] flex flex-col sm:col-span-2 md:col-span-1"
+            className="card-gradient-3 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white min-h-[320px] sm:min-h-[380px] md:min-h-[400px] sm:col-span-2 md:col-span-1 flex flex-col justify-center items-center text-center"
             variants={cardVariants}
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
           >
-            <div className="mb-auto">
+            <div className="my-auto flex flex-col justify-center items-center">
               <motion.div
-                className="w-16 h-16 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-4xl sm:text-5xl"
+                className="w-16 h-16 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-5xl sm:text-5xl"
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{
                   duration: 4,
@@ -165,8 +176,8 @@ const Process = () => {
               <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
                 Receive
               </h3>
-              <p className="text-white/80 text-sm sm:text-base">
-                Receive your design within two business days on average.
+              <p className="text-white/80 text-sm sm:text-base max-w-xs">
+                Receive your code within two business days on average.
               </p>
             </div>
           </motion.div>
