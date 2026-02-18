@@ -1,4 +1,13 @@
 import { motion, Variants } from "framer-motion";
+import feather from "@/assests/brands/feather.svg";
+import notionsender from "@/assests/brands/notionsender.svg";
+import tapilo from "@/assests/brands/tapilo.svg";
+import tweethunter from "@/assests/brands/tweethunter.svg";
+import thrivea from "@/assests/brands/thrivea.svg";
+import feather_dark from "@/assests/brands/feather-dark.svg";
+import tapilo_dark from "@/assests/brands/tapilo-dark.svg";
+import thrivea_dark from "@/assests/brands/thrivea-dark.svg";
+import tweethunter_dark from "@/assests/brands/tweethunter-dark.svg";
 
 const Process = () => {
   const containerVariants: Variants = {
@@ -10,6 +19,14 @@ const Process = () => {
       },
     },
   };
+
+  const brands = [
+    { name: "feather", light: feather, dark: feather_dark },
+    { name: "notionsender", light: notionsender, dark: notionsender },
+    { name: "tapilo", light: tapilo, dark: tapilo_dark },
+    { name: "tweethunter", light: tweethunter, dark: tweethunter_dark },
+    { name: "thrivea", light: thrivea, dark: thrivea_dark },
+  ];
 
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
@@ -109,7 +126,7 @@ const Process = () => {
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                 <path d="M21.561 5.318l-2.879-2.879c-.293-.293-.677-.439-1.061-.439-.385 0-.768.146-1.061.439l-3.56 3.561h-9c-.552 0-1 .447-1 1v13c0 .553.448 1 1 1h13c.552 0 1-.447 1-1v-9l3.561-3.561c.293-.293.439-.677.439-1.061s-.146-.767-.439-1.06zm-10.061 9.354l-2.172-2.172 6.293-6.293 2.172 2.172-6.293 6.293zm-2.561-1.339l1.756 1.728-1.695-.061-.061-1.667zm7.061 5.667h-11v-11h6l-3.18 3.18c-.293.293-.478.812-.629 1.289-.16.5-.191 1.056-.191 1.47v3.061h3.061c.414 0 1.108-.1 1.571-.29.464-.19.896-.347 1.188-.64l3.18-3.07v6zm2.5-11.328l-2.172-2.172 1.293-1.293 2.171 2.172-1.292 1.293z"/>
+                  <path d="M21.561 5.318l-2.879-2.879c-.293-.293-.677-.439-1.061-.439-.385 0-.768.146-1.061.439l-3.56 3.561h-9c-.552 0-1 .447-1 1v13c0 .553.448 1 1 1h13c.552 0 1-.447 1-1v-9l3.561-3.561c.293-.293.439-.677.439-1.061s-.146-.767-.439-1.06zm-10.061 9.354l-2.172-2.172 6.293-6.293 2.172 2.172-6.293 6.293zm-2.561-1.339l1.756 1.728-1.695-.061-.061-1.667zm7.061 5.667h-11v-11h6l-3.18 3.18c-.293.293-.478.812-.629 1.289-.16.5-.191 1.056-.191 1.47v3.061h3.061c.414 0 1.108-.1 1.571-.29.464-.19.896-.347 1.188-.64l3.18-3.07v6zm2.5-11.328l-2.172-2.172 1.293-1.293 2.171 2.172-1.292 1.293z" />
                 </svg>
               </motion.div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
@@ -185,23 +202,33 @@ const Process = () => {
 
         {/* Client logos */}
         <motion.div
-          className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 opacity-50"
+          className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.5 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          {["Nectar", "BMC", "Spotify", "Slack", "Adobe"].map((brand, i) => (
-            <motion.span
-              key={brand}
-              className="text-sm sm:text-base md:text-lg font-semibold text-muted-foreground"
+          {brands.map((brand, i) => (
+            <motion.div
+              key={brand.name}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
-              {brand}
-            </motion.span>
+              {/* Show in light mode only */}
+              <img
+                src={brand.light}
+                alt={brand.name}
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain hover:opacity-80 transition-opacity duration-300 block dark:hidden"
+              />
+              {/* Show in dark mode only */}
+              <img
+                src={brand.dark}
+                alt={brand.name}
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain hover:opacity-80 transition-opacity duration-300 hidden dark:block"
+              />
+            </motion.div>
           ))}
         </motion.div>
       </div>

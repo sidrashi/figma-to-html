@@ -12,7 +12,7 @@ const benefits = [
   {
     icon: LayoutGrid,
     title: "Design board",
-    description: "Easily manage your design queue with a Trello board.",
+    description: "Easily manage your code queue with a Trello board.",
   },
   {
     icon: DollarSign,
@@ -23,13 +23,13 @@ const benefits = [
     icon: Zap,
     title: "Fast delivery",
     description:
-      "Get your design one at a time in just a couple days on average.",
+      "Get your code one at a time in just a couple days on average.",
   },
   {
     icon: Star,
     title: "Top-notch quality",
     description:
-      "Senior design quality at your fingertips, whenever you need it.",
+      "Senior code quality at your fingertips, whenever you need it.",
   },
   {
     icon: Maximize2,
@@ -39,7 +39,7 @@ const benefits = [
   {
     icon: Fingerprint,
     title: "Unique and all yours",
-    description: "Every design is made especially for you and is 100% yours.",
+    description: "Every code is made especially for you and is 100% yours.",
   },
 ];
 
@@ -84,11 +84,11 @@ const Benefits = () => {
             Membership benefits
           </motion.p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-2xl mx-auto lg:text-6xl font-bold">
-            It's
+            Once you{" "}
             <span className="font-serif italic font-normal text-gradient bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transpare">
-              "you'll never go back"{" "}
+              try it, there’s no turning
             </span>{" "}
-            better
+            back.
           </h2>
         </motion.div>
 
@@ -99,9 +99,9 @@ const Benefits = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          Designhenko replaces unreliable freelancers and expensive agencies for
-          one flat monthly fee, with designs delivered so fast you won't want to
-          go anywhere else.
+          We replace unreliable freelancers and expensive agencies with one flat
+          monthly fee delivering high-quality development so fast, you won't
+          look anywhere else.
         </motion.p>
 
         {/* Benefits Grid */}
