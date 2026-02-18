@@ -2,19 +2,19 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
-  "Web design",
-  "Logos",
-  "Slide decks",
-  "Branding",
-  "Social media",
-  "UI/UX design",
-  "Webflow development",
-  "Mobile apps",
-  "Print design",
-  "Email",
+  "Figma → React",
+  "Landing Pages",
+  "UI Components",
+  "Mobile-First Fixes",
+  "Custom Animations",
+  "Custom Shopify",
+  "Shopify development",
+  "API Plumbing",
+  "CMS Setup",
+  "Dark Mode",
   "Display ads",
-  "Icons",
-  "Brand guides",
+  "Contact Form",
+  "Pricing Page",
   "+ more",
 ];
 
@@ -40,11 +40,11 @@ const RecentWork = () => {
             Recent work
           </motion.p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8">
-            We're talking{" "}
+            {" "}
             <span className="font-serif italic font-normal text-gradient bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
-              "Product of the Year"{" "}
+              Production-ready work {" "}
             </span>
-            good.
+            that speaks for itself.
           </h2>
           <motion.a
             href="#"

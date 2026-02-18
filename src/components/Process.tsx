@@ -151,7 +151,7 @@ const Process = () => {
                 "UI Components",
                 "Mobile-First Fixes",
                 "Custom Animations",
-                "Custom Shopify",
+                "Shopify Development",
                 "API Plumbing",
               ].map((service, i) => (
                 <motion.span
