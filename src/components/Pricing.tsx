@@ -1,14 +1,41 @@
 import { Check, PauseCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const features = [
-  "One request at a time",
-  "Avg. 48 hour delivery",
-  "Unlimited brands",
-  "Webflow development",
-  "Unlimited stock photos",
-  "Up to 2 users",
-  "Pause or cancel anytime"
+const plans = [
+  {
+    name: "Basic / Starter Plan",
+    price: "$59 - $79",
+    period: "/month",
+    description: "Perfect for small businesses",
+    features: [
+      { text: "1 request at a time"},
+      { text: "Figma → HTML OR basic React or Shopify development"},
+      { text: "Responsive design (mobile + desktop)"},
+      { text: "Clean, semantic HTML / Tailwind / CSS"},
+      { text: "Delivery in 3-5 business days"},
+      { text: "1 revision per task"},
+      { text: "Email / WhatsApp support"},
+      { text: "No complex animations"},
+      { text: "No backend / API"},
+    ]
+  },
+  {
+    name: "Pro Plan",
+    price: "$149 - $189",
+    period: "/month",
+    description: "For startups, agencies & SaaS teams",
+    features: [
+      { text: "1-2 active requests"},
+      { text: "Figma → HTML or React (Next.js optional) or Custom Shopify development"},
+      { text: "Tailwind / SCSS support"},
+      { text: "Reusable components"},
+      { text: "Basic animations (Framer Motion)"},
+      { text: "Delivery in 1-3 business days"},
+      { text: "Unlimited revisions"},
+      { text: "Priority support (WhatsApp + Email)"},
+      { text: "Landing Pages / Dashboards / Multi-page website"},
+    ]
+  }
 ];
 
 const Pricing = () => {
@@ -48,12 +75,14 @@ const Pricing = () => {
 
         <div className="max-w-lg mx-auto">
           {/* Pricing Card */}
-          <motion.div 
+          {plans.map((plan, i) => 
+          <motion.div
+            key={plan.name}
             className="bg-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border shadow-xl"
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: i * 0.15, duration: 0.6 }}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >
             {/* Header */}
@@ -64,16 +93,10 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <motion.div 
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl card-gradient-1 flex items-center justify-center text-xl sm:text-2xl"
-                whileHover={{ rotate: 10, scale: 1.1 }}
-              >
-                😊
-              </motion.div>
               <div>
-                <h3 className="text-lg sm:text-xl font-bold">Monthly Club</h3>
+                <h3 className="text-lg sm:text-xl font-bold">{plan.name} </h3>
                 <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">
-                  Pause or cancel anytime
+                  {plan.description}
                 </p>
               </div>
             </motion.div>
@@ -86,20 +109,20 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.3, type: "spring" }}
             >
-              <span className="text-4xl sm:text-5xl md:text-6xl font-bold">$5,995</span>
-              <span className="text-muted-foreground text-lg sm:text-xl">/month</span>
+              <span className="text-4xl sm:text-5xl md:text-6xl font-bold">{plan.price}</span>
+              <span className="text-muted-foreground text-lg sm:text-xl">{plan.period}</span>
             </motion.div>
 
             {/* Features */}
             <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-              {features.map((feature, index) => (
+              {plan.features.map((feature) => (
                 <motion.li 
-                  key={feature} 
+                  key={feature.text} 
                   className="flex items-center gap-2.5 sm:gap-3"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3 + index * 0.05 }}
+                  transition={{ delay: 0.3 }}
                 >
                   <motion.div 
                     className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-foreground flex items-center justify-center flex-shrink-0"
@@ -107,7 +130,7 @@ const Pricing = () => {
                   >
                     <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-background" />
                   </motion.div>
-                  <span className="text-sm sm:text-base">{feature}</span>
+                  <span className="text-sm sm:text-base">{feature.text}</span>
                 </motion.li>
               ))}
             </ul>
@@ -129,7 +152,7 @@ const Pricing = () => {
               Join today
             </motion.a>
           </motion.div>
-
+          )}
           {/* Additional info cards */}
           <motion.div 
             className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6"

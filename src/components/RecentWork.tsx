@@ -47,7 +47,9 @@ const RecentWork = () => {
             that speaks for itself.
           </h2>
           <motion.a
-            href="#"
+            href="https://feather.so/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-foreground font-medium hover:opacity-70 transition-opacity underline decoration-2 underline-offset-4 text-sm sm:text-base"
             whileHover={{ x: 5 }}
           >
@@ -80,7 +82,7 @@ const RecentWork = () => {
         </div>
 
         {/* Work showcase mockup */}
-        <motion.div
+        {/* <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +96,7 @@ const RecentWork = () => {
             All the things you need under one roof.
           </p>
 
-          {/* Gradient showcase cards */}
+          
           <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-xl md:max-w-3xl mx-auto">
             <motion.div
               className="aspect-square rounded-2xl sm:rounded-3xl card-gradient-1 flex items-center justify-center"
@@ -123,7 +125,7 @@ const RecentWork = () => {
               />
             </motion.div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
