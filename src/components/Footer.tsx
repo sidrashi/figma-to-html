@@ -13,7 +13,9 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.a 
-            href="#" 
+            href="https://x.com/pranavmalvawala"
+            target="_blank"
+            rel="noopener noreferrer" 
             className="hover:text-foreground transition-colors"
             whileHover={{ scale: 1.05 }}
           >
@@ -21,7 +23,9 @@ const Footer = () => {
           </motion.a>
           <span>•</span>
           <motion.a 
-            href="#" 
+            href="https://www.linkedin.com/in/pranavmalvawala/"
+            target="_blank"
+            rel="noopener noreferrer" 
             className="hover:text-foreground transition-colors"
             whileHover={{ scale: 1.05 }}
           >

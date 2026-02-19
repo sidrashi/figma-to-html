@@ -86,7 +86,7 @@ const Benefits = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-2xl mx-auto lg:text-6xl font-bold">
             Once you{" "}
             <span className="font-serif italic font-normal text-gradient bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transpare">
-              try it, there’s no turning
+              try it, there's no turning
             </span>{" "}
             back.
           </h2>

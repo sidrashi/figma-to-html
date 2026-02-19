@@ -8,56 +8,48 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "How fast will I receive my designs?",
-    answer: "On average, most requests are completed in just two days or less. However, more complex requests can take longer."
+    question: "How does the subscription work?",
+    answer: "You subscribe to a monthly plan and submit as many requests as you like. We work on them one at a time (or more, depending on your plan). Once one task is done, we move on to the next. Simple, predictable, and stress-free."
   },
   {
-    question: "How does onboarding work?",
-    answer: "Subscribe to a plan and we'll quickly add you to your very own Trello board. This process usually takes about an hour to complete from the time you subscribe. Once you accept the invite to Trello, you're ready to rock."
+    question: "How fast is delivery?",
+    answer: "Most requests are completed within 1-3 business days, depending on complexity. Smaller tasks are often faster."
   },
   {
-    question: "Who are the designers?",
-    answer: "Designhenko is a one-man agency, ran by Brett, the founder. Designhenko does not employ other designers, or outsource work to any other entity. You'll work directly with me through the entirety of your experience."
+    question: "Do you provide design services?",
+    answer: "No — you provide the designs, and we convert them into clean, production-ready code. This helps us stay focused on what we do best."
   },
   {
-    question: "Is there a limit to how many requests I can make?",
-    answer: "Once subscribed, you're able to add as many design requests to your queue as you'd like, and they will be delivered one by one."
+    question: "Can I pause or cancel anytime?",
+    answer: "Yes — absolutely. Pause or cancel your subscription whenever you want. No contracts. No questions asked."
   },
   {
-    question: "How does the pause feature work?",
-    answer: "We understand you may not have enough design work to fill up entire month. Perhaps you only have one or two design requests at the moment. That's where pausing your subscription comes in handy. Billing cycles are based on 31 day period."
+    question: "Is this better than hiring a freelancer or agency?",
+    answer: "If you want:    ✅ predictable monthly pricing    ✅ fast turnaround ✅ consistent quality ✅ zero hiring overhead, then yes this model is usually faster, simpler, and more cost-effective."
   },
   {
-    question: "How do you handle larger requests?",
-    answer: "Larger requests are broken down on Designhenko's end. This applies to full-scale website or mobile app designs, UI/UX work, etc. You should expect to receive a reasonable amount of work every 24-48 hours until the entire request is done."
+    question: "Who will be working on my projects?",
+    answer: "All work is handled personally no outsourcing, no middlemen. This ensures consistent quality and direct communication."
   },
   {
-    question: "What programs do you design in?",
-    answer: "Most requests are designed using Figma."
+    question: "How do we communicate?",
+    answer: "Email or WhatsApp (depending on your plan). Clear updates, quick replies, and no ticketing systems."
   },
   {
-    question: "How does Webflow development work?",
-    answer: "Webflow development is included with all subscriptions and is simply treated as a design request. As long as your website can be supported by the Webflow platform, Designhenko will take care of the development."
+    question: "What if I don't like something?",
+    answer: "Unlimited revisions are included. We'll keep refining until you're happy."
   },
   {
-    question: "How will I request designs?",
-    answer: "Designhenko offers a ton of flexibility in how you request designs using Trello. Some common ways clients request designs is directly via Trello, sharing Google docs or wireframes, or even recording a brief Loom video."
+    question: "Do you offer refunds?",
+    answer: "Because time is reserved for you once subscribed, refunds aren't offered but you can cancel anytime before your next billing cycle."
   },
   {
-    question: "What if I don't like the design?",
-    answer: "No worries! We'll continue to revise the design until you're 100% satisfied."
+    question: "What if I don't like the code?",
+    answer: "No worries! We'll continue to revise the code until you're 100% satisfied."
   },
   {
-    question: "Are there any requests you don't support?",
-    answer: "Absolutely. Designhenko does not cover the following design work: 3D modeling, animated graphics (GIFS, etc.), document design, complex packaging, extensive print design, and Adobe InDesign documents."
-  },
-  {
-    question: "What if I only have a single request?",
-    answer: "That's fine. You can pause your subscription when finished and return when you have additional design needs. There's no need to let the remainder of your subscription go to waste."
-  },
-  {
-    question: "Are there any refunds?",
-    answer: "Due to the high quality nature of the work, there will be no refunds issued past the first week of service. However, no refunds will be issued for completed work."
+    question: "What kind of work can I request?",
+    answer: "You can request: Design-to-code conversions, Landing pages & multi-page websites, Frontend components, Dashboards & UI screens Animations & interactions Responsive layouts. If it's frontend-related, you're covered."
   }
 ];
 
