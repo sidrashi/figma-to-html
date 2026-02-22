@@ -20,7 +20,17 @@ export const useTheme = () => {
       root.classList.remove("dark");
     }
     localStorage.setItem("theme", theme);
+    window.dispatchEvent(new CustomEvent("theme-change", { detail: theme }));
   }, [theme]);
+
+  useEffect(() => {
+    // 👇 Listen for theme changes from other instances
+    const handler = (e: CustomEvent) => {
+      setTheme(e.detail as Theme);
+    };
+    window.addEventListener("theme-change", handler as EventListener);
+    return () => window.removeEventListener("theme-change", handler as EventListener);
+  }, []);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));

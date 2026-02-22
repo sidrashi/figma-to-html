@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { Mail, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { format, addMonths, subMonths } from "date-fns";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+import { useTheme } from "@/hooks/useTheme";
 import { motion } from "framer-motion";
 
 const timeSlots = [
@@ -28,6 +31,21 @@ const BookingSection = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const { theme } = useTheme();
+  console.log(theme);
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "intro-call" });
+      const getVar = (variable: string) =>
+        `hsl(${getComputedStyle(document.documentElement).getPropertyValue(variable).trim()})`;
+      cal("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+        theme: theme,
+      });
+    })();
+  }, [theme]);
 
   const handlePrevMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
@@ -59,8 +77,8 @@ const BookingSection = () => {
             Book a 15-min intro call
           </h2>
         </motion.div>
-
         {/* Calendar Card */}
+        {false && (
         <motion.div
           className="bg-card rounded-2xl md:rounded-3xl border border-border shadow-xl overflow-hidden"
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -233,7 +251,13 @@ const BookingSection = () => {
             </motion.div>
           </div>
         </motion.div>
-
+        )}
+        <Cal
+          namespace="intro-call"
+          calLink="pixel-tocode-rjbhie/intro-call"
+          style={{ width: "100%", height: "100%", overflow: "scroll" }}
+          config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
+        />
         {/* Email alternative */}
         <motion.div
           className="text-center mt-8 md:mt-12"
