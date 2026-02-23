@@ -8,6 +8,10 @@ import feather_dark from "@/assests/brands/feather-dark.svg";
 import tapilo_dark from "@/assests/brands/tapilo-dark.svg";
 import thrivea_dark from "@/assests/brands/thrivea-dark.svg";
 import tweethunter_dark from "@/assests/brands/tweethunter-dark.svg";
+import client1 from "@/assests/client/client1.webp"
+import client2 from "@/assests/client/client2.webp"
+import client3 from "@/assests/client/client3.webp"
+import client4 from "@/assests/client/client4.webp"
 
 const testimonials = [
   {
@@ -15,28 +19,28 @@ const testimonials = [
       "Super fast turnaround and very clean code. I sent a design in the morning and had production-ready files within days. This subscription model honestly saves us so much time.",
     author: "Alex M.",
     role: "SaaS Founder",
-    avatar: "/src/assests/client/client1.webp",
+    avatar: client1,
   },
   {
     quote:
       "Reliable, consistent, and easy to work with. No chasing freelancers anymore. Everything just gets done, and the quality is always solid.",
     author: "Priya K.",
     role: "Product Manager",
-    avatar: "/src/assests/client/client2.webp",
+    avatar: client2,
   },
   {
     quote:
       "We use this service as our frontend partner. Designs come back pixel-perfect and organized. It feels like having an in-house developer without the overhead.",
     author: "Mark D.",
     role: "Creative Agency Owner",
-    avatar: "/src/assests/client/client3.webp",
+    avatar: client3,
   },
   {
     quote:
       "Simple process, quick delivery, and great attention to detail. This completely replaced our old freelance workflow.",
     author: "Daniel R.",
     role: "Indie Maker",
-    avatar: "/src/assests/client/client4.webp",
+    avatar: client4,
   },
 ];
 

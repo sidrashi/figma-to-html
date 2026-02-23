@@ -102,7 +102,7 @@ const Process = () => {
             >
               <p className="text-xs text-white/60 mb-1">Monthly club</p>
               <p className="text-xl md:text-2xl font-bold text-white">
-                $4,995
+                $59
                 <span className="text-xs sm:text-sm font-normal text-white/60">
                   /month
                 </span>
